@@ -187,18 +187,6 @@ Behavior:
 - Resolves the submitted address through LocationIQ.
 - Seeds the resulting bounding boxes into Redis.
 
-### `POST /run-workflow`
-
-Runs the LangGraph report workflow directly for an organization name.
-
-Request body:
-
-```json
-{
-  "org_name": "AIIMS Delhi"
-}
-```
-
 ### `WebSocket /ws`
 
 Receives live coordinates and returns a report when the user is inside a tracked geofence.

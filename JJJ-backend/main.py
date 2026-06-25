@@ -137,12 +137,3 @@ async def websocket_endpoint(websocket: WebSocket):
     # No finally block needed. FastAPI natively closes the connection when the function ends.
     print("WebSocket endpoint lifecycle completed.")
 
-@app.post("/run-workflow")
-async def run_workflow(request: WorkflowRequest):
-    try:
-        config: RunnableConfig = {"configurable": {"thread_id": "1"}}
-        result = await asyncio.to_thread(run_workflow_stream, request.org_name, config)
-        return result
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
