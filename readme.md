@@ -1,4 +1,4 @@
-# JJJ Civic Awareness Platform
+# Jagruk Janta Jaankari
 
 JJJ is a location-aware civic accountability prototype. The app watches a user's browser geolocation, checks whether the user is inside a tracked public infrastructure boundary, and displays an AI-generated civic awareness report for that organization.
 
